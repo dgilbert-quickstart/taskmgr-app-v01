@@ -2,6 +2,7 @@
 //-- hashrouter - used with GitHub pages
 import {HashRouter, Routes, Route} from "react-router-dom"
 import Home from "./components/Home";
+import ContactUs from "./components/ContactUs";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <HashRouter>            
         <Routes>      
           <Route path="/" element={<Home/>}/>
+          <Route path="/contactus" element={<ContactUs/>}/>
         </Routes>
      </HashRouter>    
     </>
