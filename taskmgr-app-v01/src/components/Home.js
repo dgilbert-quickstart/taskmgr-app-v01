@@ -45,7 +45,7 @@ function Home() {
 
       setMsg("# item added");
       setItem("");                     
-      
+
    }
 
   /* useEffect(function) - ananymous function, callback, arraw fuction */
@@ -68,7 +68,7 @@ function Home() {
 
   return (
       <>
-      <div> 
+      <div className="app-center-page">  
           <h3>Demo Task Manager App v1.0.6</h3>
           <p></p>
           <div>
@@ -80,11 +80,13 @@ function Home() {
               <p></p>
           </div>
           <p>{msgText}</p>
-          <p></p>
-          <a>all</a> {" | "}
-          <a>complete</a> {" | "}
-          <a>in-complete</a> 
-          <p></p>
+          <br/>
+          <div>
+            <a>all</a> {" | "}
+            <a>complete</a> {" | "}
+            <a>in-complete</a> 
+          </div>
+          <br/>
           <div>
               {todolist && todolist.map((item)=>
               <p key={item.id}>{

@@ -17,7 +17,7 @@ function ContactUs() {
   
     return (
       <>
-      <div>
+        <div className="app-center-page">  
           <h2>Contact Us</h2>
           <form>
               <div> 
