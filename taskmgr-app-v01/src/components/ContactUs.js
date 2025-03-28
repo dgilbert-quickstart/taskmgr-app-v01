@@ -84,7 +84,7 @@ function ContactUs() {
                   <span>* comment: </span> 
                   <br/><textarea ref={txtcomment} rows={5} cols={30} maxLength={100} placeholder="* comment"></textarea>
                   <p></p>
-                  <button onClick={btnHandleFormValidation}>submit</button> {" "} <a>clear</a>
+                  <button onClick={(e) => btnHandleFormValidation(e)}>submit</button> {" "} <a>clear</a>
               </div>
           </form>
       </div>
