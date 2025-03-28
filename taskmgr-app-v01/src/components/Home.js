@@ -50,15 +50,33 @@ function Home() {
 
    function handleDelete(e, id){
 
-    e.preventDefault()
+    e.preventDefault() //previent ie: onclick from continuing / bubling 
+    //allow on 1 click on current event
+    //onclick would refresh page 
+    //used in form buttons events
 
-    //if(!("delete item?")){
-      //return false;
-    //}
+    if(!window.confirm("delete item?")){
+      return false;
+    }
 
-    //array.findIndex 
-    //tmplist.splice(foundindex,1)
-    //todolist.splice(foundindex,1)
+    setTmpList((prevval)=>{
+      const _lst = [...prevval]
+      
+      const _index = _lst.findIndex((item)=>{
+        if (item.id == id)
+        {
+          return true;
+        }
+      })
+
+      if(_index>0)
+      {
+        _lst.splice(_index,1)
+      }
+
+      setTodoList((prevval)=>[..._lst]);    
+      return _lst;
+    });
 
     setMsg(`# item deleted ${id}`)
 
