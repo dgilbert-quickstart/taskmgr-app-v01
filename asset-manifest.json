@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/taskmgr-app-v01/static/css/main.12433d2b.css",
-    "main.js": "/taskmgr-app-v01/static/js/main.7da37c2d.js",
+    "main.js": "/taskmgr-app-v01/static/js/main.b301f3e6.js",
     "static/js/453.03fdfdce.chunk.js": "/taskmgr-app-v01/static/js/453.03fdfdce.chunk.js",
     "index.html": "/taskmgr-app-v01/index.html",
     "main.12433d2b.css.map": "/taskmgr-app-v01/static/css/main.12433d2b.css.map",
-    "main.7da37c2d.js.map": "/taskmgr-app-v01/static/js/main.7da37c2d.js.map",
+    "main.b301f3e6.js.map": "/taskmgr-app-v01/static/js/main.b301f3e6.js.map",
     "453.03fdfdce.chunk.js.map": "/taskmgr-app-v01/static/js/453.03fdfdce.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.12433d2b.css",
-    "static/js/main.7da37c2d.js"
+    "static/js/main.b301f3e6.js"
   ]
 }
