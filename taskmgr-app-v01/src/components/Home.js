@@ -30,19 +30,23 @@ function Home() {
           return true;
       }
 
-      /*
       const _newitem = {id:new Date().getTime(),name:txtitem,completed:false};
 
       setTmpList((prevval)=>{
+          
+          //modern javascript array add
+          //-- spread operator ... = add item to array ... include exing items 
+          //or array.push()
+
           const _lst = [...prevval,_newitem]
           setTodoList((prevval)=>[..._lst]);    
           return _lst;
       });
-      */
 
       setMsg("# item added");
       setItem("");                     
-}
+      
+   }
 
   /* useEffect(function) - ananymous function, callback, arraw fuction */
   //useEffect(function(){})
