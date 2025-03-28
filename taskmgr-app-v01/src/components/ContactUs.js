@@ -6,7 +6,6 @@ function ContactUs() {
   const txtfirstname = useRef("");
   const txtlastname = useRef("");
   const txtemail = useRef("");
-  const txtphone = useRef("");
   const txtcomment = useRef("");
 
   const btnHandleFormValidation = (event)=>
