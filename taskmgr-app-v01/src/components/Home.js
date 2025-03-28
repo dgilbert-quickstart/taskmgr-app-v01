@@ -1,6 +1,23 @@
-import {useEffect} from "react"
+import {useEffect, useState} from "react"
+
+const initial_todo_items = [
+  {id:1,name:"item one", completed:false},
+  {id:2,name:"item two", completed:false},
+  {id:3,name:"item three", completed:true},
+  {id:4,name:"item four", completed:false},
+  {id:5,name:"item five", completed:false}
+];
 
 function Home() {
+
+  /*
+  useState = uesed to update and track data changes
+            state variable
+            update state function 
+  */
+
+  const [tmplist, setTmpList] = useState(initial_todo_items);
+  const [todolist, setTodoList] = useState(null);
 
   /* useEffect(function) - ananymous function, callback, arraw fuction */
   //useEffect(function(){})
@@ -9,6 +26,10 @@ function Home() {
   useEffect(()=>{
 
     console.log("#App::Home page load")
+    
+    setTodoList(tmplist)
+    console.log("---tmplist\n",tmplist)
+    console.log("---todolist\n",todolist)
 
     //page load [] -- 1 time
     //-- always refresh page on state update -- setTodoList , updated caused a page refresh, = endless loop page refresh
