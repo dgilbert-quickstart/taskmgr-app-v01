@@ -18,6 +18,31 @@ function Home() {
 
   const [tmplist, setTmpList] = useState(initial_todo_items);
   const [todolist, setTodoList] = useState(null);
+  const [txtitem, setItem] = useState("")
+  const [msgText,setMsg] = useState("")
+  
+  const handleAddNewItem = (e) =>{
+    e.preventDefault();
+      
+      if(txtitem === null ||  txtitem.trim().length === 0)
+      {
+          setMsg(`* please enter a valid item name`);
+          return true;
+      }
+
+      /*
+      const _newitem = {id:new Date().getTime(),name:txtitem,completed:false};
+
+      setTmpList((prevval)=>{
+          const _lst = [...prevval,_newitem]
+          setTodoList((prevval)=>[..._lst]);    
+          return _lst;
+      });
+      */
+
+      setMsg("# item added");
+      setItem("");                     
+}
 
   /* useEffect(function) - ananymous function, callback, arraw fuction */
   //useEffect(function(){})
@@ -43,10 +68,14 @@ function Home() {
           <h3>Demo Task Manager App v1.0.6</h3>
           <p></p>
           <div>
-              <input type="text" maxLength={25} placeholder="* add item"/>
-              {" "} <button>Add</button> {" "} <a>clear</a>
+              <input value={txtitem} type="text" 
+                       onChange={(e)=>setItem(e.target.value)}
+                       maxLength={25} placeholder="* add item"/>
+              {" "} 
+              <button onClick={handleAddNewItem}>Add</button> {" "} <a>clear</a>
               <p></p>
           </div>
+          <p>{msgText}</p>
           <p></p>
           <a>all</a> {" | "}
           <a>complete</a> {" | "}
