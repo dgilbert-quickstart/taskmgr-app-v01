@@ -53,10 +53,16 @@ function Home() {
           <a>in-complete</a> 
           <p></p>
           <div>
-            <span>[] itema -x- </span><br/>
-            <span>[x] itemb -x- </span><br/>
-            <span>[] itemc -x- </span><br/>
-            <span>[x] itemd -x- </span><br/>
+              {todolist && todolist.map((item)=>
+              <p key={item.id}>{
+                <>
+                   <input type="checkbox" checked={item.completed}/>
+                    {" "}
+                    <span>{item.name}</span>
+                    {" "}
+                   <button>x</button>
+                </>}
+              </p>)}
           </div>
           <p></p>
           <p>footer @ 2025</p>       
