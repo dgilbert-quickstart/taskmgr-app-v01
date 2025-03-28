@@ -48,6 +48,22 @@ function Home() {
 
    }
 
+   function handleDelete(e, id){
+
+    e.preventDefault()
+
+    //if(!("delete item?")){
+      //return false;
+    //}
+
+    //array.findIndex 
+    //tmplist.splice(foundindex,1)
+    //todolist.splice(foundindex,1)
+
+    setMsg(`# item deleted ${id}`)
+
+   }
+
   /* useEffect(function) - ananymous function, callback, arraw fuction */
   //useEffect(function(){})
   //useEffect(()=>{
@@ -95,7 +111,7 @@ function Home() {
                     {" "}
                     <span>{item.name}</span>
                     {" "}
-                   <button>x</button>
+                   <button onClick={(e)=>handleDelete(e,item.id)}>x</button>
                 </>}
               </p>)}
           </div>
